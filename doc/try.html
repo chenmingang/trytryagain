@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<style type="text/css">
+			.grid-item { width: 200px;background-color: green;margin: 10px; }
+			.grid-item--width2 { width: 400px; }
+		</style>
+		<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
+	</head>
+	<body>
+		<div class="nav">
+
+		</div>
+		<div class="grid">
+			<div class="grid-item">...</div>
+			<div class="grid-item grid-item--width2">...</div>
+			<div class="grid-item">...</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('.grid').masonry({
+		  itemSelector: '.grid-item',
+		  columnWidth: 1
+		});
+	</script>
+</html>
