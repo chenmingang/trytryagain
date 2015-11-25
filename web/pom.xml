@@ -163,11 +163,11 @@
 		<finalName>trytryagain-web</finalName>
 		<resources>
 			<resource>
-				<directory>src/main/resources</directory>
+				<directory>src/main/webapp/WEB-INF/resources</directory>
 				<filtering>true</filtering>
 			</resource>
 			<resource>
-				<directory>src/main/properties</directory>
+				<directory>src/main/webapp/WEB-INF/properties</directory>
 			</resource>
 			<resource>
 				<directory>${project.basedir}/src/main/java</directory>

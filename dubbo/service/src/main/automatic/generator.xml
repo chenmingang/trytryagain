@@ -4,11 +4,11 @@
   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
 	<context id="DB2Tables" targetRuntime="MyBatis3">
-		<plugin type="com.diy.generateGeneratePlugin" />
+		<plugin type="win.trytryagain.generate.GeneratePlugin" />
 
 		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
-			<!--<property name="searchString" value="Example$" />-->
-			<!--<property name="replaceString" value="Criteria" />-->
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
 		</plugin>
 
 		<commentGenerator>
@@ -16,29 +16,30 @@
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/trytryagain" userId="root"
-			password="Q12_test">
+			connectionURL="jdbc:mysql://localhost:3306/trytryagain"
+            userId="root"
+			password="111111">
 		</jdbcConnection>
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 		
 		<javaModelGenerator targetPackage="win.trytryagain.model"
-			targetProject="src/main/java">
+			targetProject="/home/momo/projects/trytryagain/dubbo/api/src/main/java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<sqlMapGenerator targetPackage="win.trytryagain.mapper"
-			targetProject="src/main/java">
+			targetProject="/home/momo/projects/trytryagain/dubbo/service/src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<javaClientGenerator type="XMLMAPPER"
 			targetPackage="win.trytryagain.mapper"
-			targetProject="src/main/java">
+			targetProject="/home/momo/projects/trytryagain/dubbo/service/src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-        <table tableName="promotion_ad" domainObjectName="PromotionAd">
+        <table tableName="user" domainObjectName="User">
             <property name="useActualColumnNames" value="true"/>
         </table>
 	</context>

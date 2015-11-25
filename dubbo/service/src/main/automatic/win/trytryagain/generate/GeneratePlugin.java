@@ -1,4 +1,4 @@
-package com.diy.generate;
+package win.trytryagain.generate;
 
 import org.mybatis.generator.api.*;
 import org.mybatis.generator.api.dom.java.*;

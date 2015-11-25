@@ -1,12 +1,12 @@
 create table user(
- id int(11),
+ id int(11) unsigned NOT NULL AUTO_INCREMENT,
  userName varchar(128),
  loginEmail varchar(128),
  password varchar(128),
  sex varchar(8),
  createTime datetime,
  lastLoginTime datetime,
- isDel int(1),
+ isDel int(1) default 0,
  PRIMARY KEY (id)
 );
 
@@ -18,7 +18,7 @@ info varchar(1024),
 img varchar(128),
 createTime datetime,
 updateTime datetime,
-isDel int(1),
+isDel int(1) default 0,
 primary  key (id)
 );
 
@@ -30,6 +30,6 @@ stepNo int(11),
 content text,
 createTime datetime,
 updateTime datetime,
-isDel int(1),
+isDel int(1) default 0,
 primary key (id)
 );
