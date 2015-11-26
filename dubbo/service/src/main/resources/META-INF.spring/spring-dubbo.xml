@@ -7,12 +7,12 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 	
-	<dubbo:application name="dubbo-admin" />
+	<dubbo:application name="dubbo-try" />
 
-	<dubbo:registry address="${dubbo.registry.address}" check="false" file="false" />
+	<dubbo:registry id="marketRegistry" address="${dubbo.registry.address}" check="false" file="false" />
+    <dubbo:protocol id="protocol"  name="dubbo" port="23199" />
+    <dubbo:provider loadbalance="random" />
+	<!--<dubbo:reference id="registryService" interface="com.alibaba.dubbo.registry.RegistryService" check="false" version="0.0.1"/>-->
 
-	<!--<dubbo:reference id="registryService" interface="com.alibaba.dubbo.registry.RegistryService" check="false" />-->
-
-	<bean id="userService" class="win.trytryagain.service.UserServiceImpl" />
-
+    <dubbo:service interface="win.trytryagain.service.UserService" ref="userServiceImpl" protocol="protocol" version="0.0.1" retries="1" registry="marketRegistry"/>
 </beans>

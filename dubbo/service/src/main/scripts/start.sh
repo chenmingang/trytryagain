@@ -5,10 +5,17 @@ cd ..
 DEPLOY_DIR=`pwd`
 CONF_DIR=$DEPLOY_DIR/conf
 
-SERVER_NAME=`sed '/dubbo.application.name/!d;s/.*=//' conf/dubbo.properties | tr -d '\r'`
-SERVER_PROTOCOL=`sed '/dubbo.protocol.name/!d;s/.*=//' conf/dubbo.properties | tr -d '\r'`
-SERVER_PORT=`sed '/dubbo.protocol.port/!d;s/.*=//' conf/dubbo.properties | tr -d '\r'`
-LOGS_FILE=`sed '/dubbo.log4j.file/!d;s/.*=//' conf/dubbo.properties | tr -d '\r'`
+USER=www
+GROUP=www
+
+#SERVER_NAME=`sed '/dubbo.application.name/!d;s/.*=//' conf/dubbo.properties | tr -d '\r'`
+#SERVER_PROTOCOL=`sed '/dubbo.protocol.name/!d;s/.*=//' conf/dubbo.properties | tr -d '\r'`
+#SERVER_PORT=`sed '/dubbo.protocol.port/!d;s/.*=//' conf/dubbo.properties | tr -d '\r'`
+#LOGS_FILE=`sed '/dubbo.log4j.file/!d;s/.*=//' conf/dubbo.properties | tr -d '\r'`
+SERVER_NAME=""
+SERVER_PROTOCOL=""
+SERVER_PORT=""
+LOGS_FILE=""
 
 if [ -z "$SERVER_NAME" ]; then
     SERVER_NAME=`hostname`
@@ -29,16 +36,13 @@ if [ -n "$SERVER_PORT" ]; then
     fi
 fi
 
-LOGS_DIR=""
-if [ -n "$LOGS_FILE" ]; then
-    LOGS_DIR=`dirname $LOGS_FILE`
-else
-    LOGS_DIR=$DEPLOY_DIR/logs
-fi
+LOGS_DIR="/data/logs/`basename $DEPLOY_DIR`"
+
 if [ ! -d $LOGS_DIR ]; then
-    mkdir $LOGS_DIR
+    mkdir -p $LOGS_DIR
+    chown -R $USER.$GROUP $LOGS_DIR
 fi
-STDOUT_FILE=$LOGS_DIR/stdout.log
+STDOUT_FILE=$LOGS_DIR/`basename $DEPLOY_DIR`.log
 
 LIB_DIR=$DEPLOY_DIR/lib
 LIB_JARS=`ls $LIB_DIR|grep .jar|awk '{print "'$LIB_DIR'/"$0}'|tr "\n" ":"`
@@ -55,9 +59,9 @@ fi
 JAVA_MEM_OPTS=""
 BITS=`java -version 2>&1 | grep -i 64-bit`
 if [ -n "$BITS" ]; then
-    JAVA_MEM_OPTS=" -server -Xmx2g -Xms2g -Xmn256m -XX:PermSize=128m -Xss256k -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSCompactAtFullCollection -XX:LargePageSizeInBytes=128m -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 "
+    JAVA_MEM_OPTS=" -server -Xmx2g -Xms2g -Xmn720m -XX:PermSize=128m -Xss256k -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSCompactAtFullCollection -XX:LargePageSizeInBytes=128m -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 "
 else
-    JAVA_MEM_OPTS=" -server -Xms1g -Xmx1g -XX:PermSize=128m -XX:SurvivorRatio=2 -XX:+UseParallelGC "
+    JAVA_MEM_OPTS=" -server -Xms2g -Xmx2g -XX:PermSize=128m -XX:SurvivorRatio=2 -XX:+UseParallelGC "
 fi
 
 echo -e "Starting the $SERVER_NAME ...\c"
