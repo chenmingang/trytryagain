@@ -1,8 +1,8 @@
-package trytryagain.service.impl;
+package win.trytryagain.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import trytryagain.service.UserService;
+import win.trytryagain.service.UserService;
 import win.trytryagain.model.User;
 import win.trytryagain.model.UserCriteria;
 import win.trytryagain.service.UserRemoteService;

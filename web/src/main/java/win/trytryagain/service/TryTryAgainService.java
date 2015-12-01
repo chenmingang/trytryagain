@@ -1,4 +1,4 @@
-package trytryagain.service;
+package win.trytryagain.service;
 
 import win.trytryagain.model.TryTryAgain;
 import win.trytryagain.model.TryTryAgainCriteria;
