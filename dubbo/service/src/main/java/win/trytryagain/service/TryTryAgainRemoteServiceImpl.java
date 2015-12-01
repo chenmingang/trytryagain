@@ -12,7 +12,7 @@ import java.util.List;
  * Created by momo on 15-12-1.
  */
 @Service
-public class TryTryAgainServiceImpl implements TryTryAgainService {
+public class TryTryAgainRemoteServiceImpl implements TryTryAgainRemoteService {
 
     @Autowired
     TryTryAgainMapper tryTryAgainMapper;

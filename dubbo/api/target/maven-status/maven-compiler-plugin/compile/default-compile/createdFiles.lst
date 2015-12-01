@@ -1,5 +1,12 @@
-win/trytryagain/model/UserExample$Criterion.class
+win/trytryagain/service/UserService.class
+win/trytryagain/model/UserCriteria$GeneratedCriteria.class
+win/trytryagain/model/TryTryAgainCriteria$Criteria.class
+win/trytryagain/model/UserCriteria$Criterion.class
 win/trytryagain/model/User.class
-win/trytryagain/model/UserExample$GeneratedCriteria.class
-win/trytryagain/model/UserExample$Criteria.class
-win/trytryagain/model/UserExample.class
+win/trytryagain/service/TryTryAgainService.class
+win/trytryagain/model/TryTryAgainCriteria.class
+win/trytryagain/model/UserCriteria.class
+win/trytryagain/model/TryTryAgainCriteria$Criterion.class
+win/trytryagain/model/UserCriteria$Criteria.class
+win/trytryagain/model/TryTryAgain.class
+win/trytryagain/model/TryTryAgainCriteria$GeneratedCriteria.class

@@ -14,6 +14,6 @@
     <dubbo:provider loadbalance="random" />
 	<!--<dubbo:reference id="registryService" interface="com.alibaba.dubbo.registry.RegistryService" check="false" version="0.0.1"/>-->
 
-    <dubbo:service interface="win.trytryagain.service.UserService" ref="userServiceImpl" protocol="protocol" version="0.0.1" retries="1" registry="registry"/>
-    <dubbo:service interface="win.trytryagain.service.UserService" ref="userServiceImpl" protocol="protocol" version="0.0.1" retries="1" registry="registry"/>
+    <dubbo:service interface="win.trytryagain.service.UserRemoteService" ref="userRemoteServiceImpl" protocol="protocol" version="0.0.1" retries="1" registry="registry"/>
+    <dubbo:service interface="win.trytryagain.service.TryTryAgainRemoteService" ref="tryTryAgainRemoteServiceImpl" protocol="protocol" version="0.0.1" retries="1" registry="registry"/>
 </beans>

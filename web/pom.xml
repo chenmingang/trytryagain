@@ -15,6 +15,11 @@
 
 	<dependencies>
         <dependency>
+            <groupId>win.trytryagain.service</groupId>
+            <artifactId>trytryagain-service-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
             <version>2.5.3</version>

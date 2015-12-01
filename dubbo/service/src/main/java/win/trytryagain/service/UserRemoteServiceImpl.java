@@ -12,7 +12,7 @@ import java.util.List;
  * Created by momo on 15-11-25.
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserRemoteServiceImpl implements UserRemoteService {
     @Autowired
     UserMapper userMapper;
 
@@ -27,28 +27,28 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User saveSelective(User tryTryAgain) {
-        if (tryTryAgain == null) {
+    public User saveSelective(User user) {
+        if (user == null) {
             return null;
         }
-        if (tryTryAgain.getId() == null) {
-            userMapper.insertSelective(tryTryAgain);
+        if (user.getId() == null) {
+            userMapper.insertSelective(user);
         } else {
-            userMapper.updateByPrimaryKeySelective(tryTryAgain);
+            userMapper.updateByPrimaryKeySelective(user);
         }
-        return tryTryAgain;
+        return user;
     }
 
     @Override
-    public User save(User tryTryAgain) {
-        if (tryTryAgain == null) {
+    public User save(User user) {
+        if (user == null) {
             return null;
         }
-        if (tryTryAgain.getId() == null) {
-            userMapper.insert(tryTryAgain);
+        if (user.getId() == null) {
+            userMapper.insert(user);
         } else {
-            userMapper.updateByPrimaryKey(tryTryAgain);
+            userMapper.updateByPrimaryKey(user);
         }
-        return tryTryAgain;
+        return user;
     }
 }
