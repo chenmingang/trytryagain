@@ -9,10 +9,11 @@
 	
 	<dubbo:application name="dubbo-try" />
 
-	<dubbo:registry id="marketRegistry" address="${dubbo.registry.address}" check="false" file="false" />
+	<dubbo:registry id="registry" address="${dubbo.registry.address}" check="false" file="false" />
     <dubbo:protocol id="protocol"  name="dubbo" port="23199" />
     <dubbo:provider loadbalance="random" />
 	<!--<dubbo:reference id="registryService" interface="com.alibaba.dubbo.registry.RegistryService" check="false" version="0.0.1"/>-->
 
-    <dubbo:service interface="win.trytryagain.service.UserService" ref="userServiceImpl" protocol="protocol" version="0.0.1" retries="1" registry="marketRegistry"/>
+    <dubbo:service interface="win.trytryagain.service.UserService" ref="userServiceImpl" protocol="protocol" version="0.0.1" retries="1" registry="registry"/>
+    <dubbo:service interface="win.trytryagain.service.UserService" ref="userServiceImpl" protocol="protocol" version="0.0.1" retries="1" registry="registry"/>
 </beans>

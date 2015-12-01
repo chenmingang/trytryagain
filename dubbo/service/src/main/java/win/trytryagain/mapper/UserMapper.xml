@@ -110,7 +110,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="win.trytryagain.model.User" >
+  <insert id="insert" parameterType="win.trytryagain.model.User" useGeneratedKeys="true" keyProperty= "id">
     insert into user (id, userName, loginEmail, 
       password, sex, createTime, 
       lastLoginTime, isDel)
@@ -118,7 +118,7 @@
       #{password,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
       #{lastLoginTime,jdbcType=TIMESTAMP}, #{isDel,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="win.trytryagain.model.User" >
+  <insert id="insertSelective" parameterType="win.trytryagain.model.User" useGeneratedKeys="true" keyProperty= "id">
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

@@ -1,10 +1,9 @@
 package win.trytryagain.mapper;
 
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import win.trytryagain.model.User;
 import win.trytryagain.model.UserCriteria;
-
-import java.util.List;
 
 public interface UserMapper {
     int countByExample(UserCriteria example);
