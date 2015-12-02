@@ -6,6 +6,7 @@ import win.trytryagain.mapper.TryTryAgainMapper;
 import win.trytryagain.model.TryTryAgain;
 import win.trytryagain.model.TryTryAgainCriteria;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -45,7 +46,10 @@ public class TryTryAgainRemoteServiceImpl implements TryTryAgainRemoteService {
         if (tryTryAgain == null) {
             return null;
         }
+        Date now = new Date();
+        tryTryAgain.setUpdateTime(now);
         if (tryTryAgain.getId() == null) {
+            tryTryAgain.setCreateTime(now);
             tryTryAgainMapper.insert(tryTryAgain);
         } else {
             tryTryAgainMapper.updateByPrimaryKey(tryTryAgain);

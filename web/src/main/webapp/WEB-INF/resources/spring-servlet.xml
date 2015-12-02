@@ -44,7 +44,7 @@
                 <prop key="output.encoding">UTF-8</prop>
                 <prop key="exposeSpringMacroHelpers">true</prop>
                 <prop key="velocimacro.library.autoreload">true</prop>
-                <prop key="userdirective">com.lagou.market.manage.interceptor.SecurityDirective</prop>
+                <!--<prop key="userdirective">com...manage.interceptor.SecurityDirective</prop>-->
             </props>
         </property>
     </bean>
@@ -52,7 +52,7 @@
     <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
         <property name="layoutUrl" value="layout/layout.vm"/>
         <property name="cache" value="true"/>
-        <property name="prefix" value="/views/"/>
+        <property name="prefix" value="/view/"/>
         <property name="suffix" value=".html"/>
         <property name="exposeRequestAttributes" value="true"/>
         <property name="requestContextAttribute" value="requestContext"/>
@@ -90,7 +90,7 @@
     </bean>
 
     <!-- 控制器所在的包{添加注解的Controller} -->
-    <context:component-scan base-package=""/>
+    <context:component-scan base-package="win.trytryagain.controller"/>
     <mvc:default-servlet-handler/>
 
     <mvc:annotation-driven>

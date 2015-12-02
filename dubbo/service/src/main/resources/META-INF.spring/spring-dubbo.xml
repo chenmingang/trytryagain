@@ -10,7 +10,7 @@
 	<dubbo:application name="dubbo-try" />
 
 	<dubbo:registry id="registry" address="${dubbo.registry.address}" check="false" file="false" />
-    <dubbo:protocol id="protocol"  name="dubbo" port="23199" />
+    <dubbo:protocol id="protocol"  name="dubbo" port="20922" />
     <dubbo:provider loadbalance="random" />
 	<!--<dubbo:reference id="registryService" interface="com.alibaba.dubbo.registry.RegistryService" check="false" version="0.0.1"/>-->
 

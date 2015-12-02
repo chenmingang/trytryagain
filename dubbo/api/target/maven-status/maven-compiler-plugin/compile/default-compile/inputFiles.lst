@@ -1,6 +1,6 @@
 /home/momo/projects/trytryagain/dubbo/api/src/main/java/win/trytryagain/model/TryTryAgain.java
+/home/momo/projects/trytryagain/dubbo/api/src/main/java/win/trytryagain/service/TryTryAgainRemoteService.java
 /home/momo/projects/trytryagain/dubbo/api/src/main/java/win/trytryagain/model/UserCriteria.java
-/home/momo/projects/trytryagain/dubbo/api/src/main/java/win/trytryagain/service/UserService.java
-/home/momo/projects/trytryagain/dubbo/api/src/main/java/win/trytryagain/service/TryTryAgainService.java
+/home/momo/projects/trytryagain/dubbo/api/src/main/java/win/trytryagain/service/UserRemoteService.java
 /home/momo/projects/trytryagain/dubbo/api/src/main/java/win/trytryagain/model/User.java
 /home/momo/projects/trytryagain/dubbo/api/src/main/java/win/trytryagain/model/TryTryAgainCriteria.java

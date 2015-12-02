@@ -9,7 +9,7 @@
       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!-- 应用名称，如果当前应用已经配置过，无需在配置 -->
-    <dubbo:application name="" />
+    <dubbo:application name="application" />
     <!-- 使用zookeeper注册中心暴露服务地址 -->
     <dubbo:registry address="${dubbo.registry.address}"/>
     <dubbo:protocol name="dubbo" />
