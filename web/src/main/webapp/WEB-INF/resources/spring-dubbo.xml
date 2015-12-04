@@ -21,6 +21,6 @@
             </list>
         </property>
     </bean>
-    <dubbo:reference id="userRemoteService" interface="win.trytryagain.service.UserRemoteService"/>
-    <dubbo:reference id="tryTryAgainRemoteService" interface="win.trytryagain.service.TryTryAgainRemoteService" />
+    <dubbo:reference id="userRemoteService" interface="win.trytryagain.service.UserRemoteService" version="0.0.1"/>
+    <dubbo:reference id="tryTryAgainRemoteService" interface="win.trytryagain.service.TryTryAgainRemoteService" version="0.0.1"/>
 </beans>
