@@ -15,7 +15,7 @@
     <!--<dubbo:reference id="registryService" interface="com.alibaba.dubbo.registry.RegistryService" check="false" version="0.0.1"/>-->
 
     <dubbo:service interface="win.trytryagain.service.UserRemoteService" ref="userRemoteServiceImpl" protocol="protocol"
-                   version="0.0.1" retries="1" registry="registry"/>
+                   version="0.0.1" retries="1" registry="registry" timeout="5000"/>
     <dubbo:service interface="win.trytryagain.service.TryTryAgainRemoteService" ref="tryTryAgainRemoteServiceImpl"
-                   protocol="protocol" version="0.0.1" retries="1" registry="registry"/>
+                   protocol="protocol" version="0.0.1" retries="1" registry="registry" timeout="5000"/>
 </beans>
