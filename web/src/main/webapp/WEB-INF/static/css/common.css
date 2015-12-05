@@ -57,6 +57,10 @@ table {
     width: 86%;
     margin: 0 auto;
 }
+#footer{
+    font-size: 12px;
+    color: #aaa;
+}
 #searcher input{
     border: 2px solid #27ae60;
     -webkit-box-shadow: none;
@@ -104,4 +108,8 @@ table {
     color: #999;
     font-weight: normal;
     font-size: 12px;
+    padding: 0 10px;
+}
+.author{
+    float: right;
 }
