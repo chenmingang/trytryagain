@@ -39,12 +39,12 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-        <table tableName="user" domainObjectName="User">
-            <property name="useActualColumnNames" value="true"/>
-        </table>
-        <!--<table tableName="trytryagain" domainObjectName="TryTryAgain">-->
+        <!--<table tableName="user" domainObjectName="User">-->
             <!--<property name="useActualColumnNames" value="true"/>-->
         <!--</table>-->
+        <table tableName="trytryagain" domainObjectName="TryTryAgain">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
 
 	</context>
 </generatorConfiguration>

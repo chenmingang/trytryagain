@@ -5,6 +5,8 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="tags" property="tags" jdbcType="VARCHAR" />
     <result column="userId" property="userId" jdbcType="INTEGER" />
+    <result column="userName" property="userName" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="info" property="info" jdbcType="VARCHAR" />
     <result column="img" property="img" jdbcType="VARCHAR" />
     <result column="createTime" property="createTime" jdbcType="TIMESTAMP" />
@@ -73,7 +75,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, tags, userId, info, img, createTime, updateTime, isDel
+    id, tags, userId, userName, title, info, img, createTime, updateTime, isDel
   </sql>
   <sql id="Blob_Column_List" >
     content
@@ -134,17 +136,17 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="win.trytryagain.model.TryTryAgain" useGeneratedKeys="true" keyProperty= "id">
+  <insert id="insert" parameterType="win.trytryagain.model.TryTryAgain" >
     insert into trytryagain (id, tags, userId, 
-      info, img, createTime, 
-      updateTime, isDel, content
-      )
+      userName, title, info, 
+      img, createTime, updateTime, 
+      isDel, content)
     values (#{id,jdbcType=INTEGER}, #{tags,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
-      #{info,jdbcType=VARCHAR}, #{img,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{updateTime,jdbcType=TIMESTAMP}, #{isDel,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR}
-      )
+      #{userName,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{info,jdbcType=VARCHAR}, 
+      #{img,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{isDel,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="win.trytryagain.model.TryTryAgain" useGeneratedKeys="true" keyProperty= "id">
+  <insert id="insertSelective" parameterType="win.trytryagain.model.TryTryAgain" >
     insert into trytryagain
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -155,6 +157,12 @@
       </if>
       <if test="userId != null" >
         userId,
+      </if>
+      <if test="userName != null" >
+        userName,
+      </if>
+      <if test="title != null" >
+        title,
       </if>
       <if test="info != null" >
         info,
@@ -184,6 +192,12 @@
       </if>
       <if test="userId != null" >
         #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
       </if>
       <if test="info != null" >
         #{info,jdbcType=VARCHAR},
@@ -223,6 +237,12 @@
       <if test="record.userId != null" >
         userId = #{record.userId,jdbcType=INTEGER},
       </if>
+      <if test="record.userName != null" >
+        userName = #{record.userName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.title != null" >
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
       <if test="record.info != null" >
         info = #{record.info,jdbcType=VARCHAR},
       </if>
@@ -251,6 +271,8 @@
     set id = #{record.id,jdbcType=INTEGER},
       tags = #{record.tags,jdbcType=VARCHAR},
       userId = #{record.userId,jdbcType=INTEGER},
+      userName = #{record.userName,jdbcType=VARCHAR},
+      title = #{record.title,jdbcType=VARCHAR},
       info = #{record.info,jdbcType=VARCHAR},
       img = #{record.img,jdbcType=VARCHAR},
       createTime = #{record.createTime,jdbcType=TIMESTAMP},
@@ -266,6 +288,8 @@
     set id = #{record.id,jdbcType=INTEGER},
       tags = #{record.tags,jdbcType=VARCHAR},
       userId = #{record.userId,jdbcType=INTEGER},
+      userName = #{record.userName,jdbcType=VARCHAR},
+      title = #{record.title,jdbcType=VARCHAR},
       info = #{record.info,jdbcType=VARCHAR},
       img = #{record.img,jdbcType=VARCHAR},
       createTime = #{record.createTime,jdbcType=TIMESTAMP},
@@ -283,6 +307,12 @@
       </if>
       <if test="userId != null" >
         userId = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null" >
+        userName = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
       </if>
       <if test="info != null" >
         info = #{info,jdbcType=VARCHAR},
@@ -309,6 +339,8 @@
     update trytryagain
     set tags = #{tags,jdbcType=VARCHAR},
       userId = #{userId,jdbcType=INTEGER},
+      userName = #{userName,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
       info = #{info,jdbcType=VARCHAR},
       img = #{img,jdbcType=VARCHAR},
       createTime = #{createTime,jdbcType=TIMESTAMP},
@@ -321,6 +353,8 @@
     update trytryagain
     set tags = #{tags,jdbcType=VARCHAR},
       userId = #{userId,jdbcType=INTEGER},
+      userName = #{userName,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
       info = #{info,jdbcType=VARCHAR},
       img = #{img,jdbcType=VARCHAR},
       createTime = #{createTime,jdbcType=TIMESTAMP},

@@ -12,6 +12,10 @@ public class TryTryAgain implements Serializable {
 
     private Integer userId;
 
+    private String userName;
+
+    private String title;
+
     private String info;
 
     private String img;
@@ -46,6 +50,22 @@ public class TryTryAgain implements Serializable {
 
     public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
     }
 
     public String getInfo() {
