@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import win.trytryagain.model.TryTryAgain;
 import win.trytryagain.model.TryTryAgainCriteria;
 import win.trytryagain.service.TryTryAgainService;
@@ -27,6 +28,7 @@ public class TryTryAgainController {
     }
 
     @RequestMapping("list")
+    @ResponseBody
     public String list(HttpServletRequest request) {
         TryTryAgainCriteria criteria = new TryTryAgainCriteria();
         criteria.setLimitStart(0);
@@ -35,11 +37,13 @@ public class TryTryAgainController {
     }
 
     @RequestMapping("save")
+    @ResponseBody
     public String save(TryTryAgain tryTryAgain) {
         return gson.toJson(tryTryAgainService.save(tryTryAgain));
     }
 
     @RequestMapping("get")
+    @ResponseBody
     public String get(Integer id) {
         return gson.toJson(tryTryAgainService.get(id));
     }

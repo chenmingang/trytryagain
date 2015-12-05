@@ -104,5 +104,5 @@
             </bean>
         </mvc:message-converters>
     </mvc:annotation-driven>
-
+    <mvc:resources mapping="/static/**" location="WEB-INF/static/"/>
 </beans>
