@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by momo on 15-12-1.
  */
 @Controller
-@RequestMapping("try")
+@RequestMapping("")
 public class TryTryAgainController {
     Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm").create();
     @Autowired
