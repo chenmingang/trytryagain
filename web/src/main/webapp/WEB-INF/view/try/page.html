@@ -1,45 +1,12 @@
-<div id="index" ng-app="" ng-controller="indexCtr" ng-init="init()">
+<div id="index" ng-app="MyApp" ng-controller="indexCtr" ng-init="init()">
     <div id="header">
         <div id="searcher">
             <input placeholder="标题or标签">
         </div>
     </div>
     <div id="trys">
-        <div class="try-item">
-            <div class="try-taste">
-                <h4>
-                    大道理
-                </h4>
-
-                <p>
-                    骏马面前无沟壑，怂人面前全是坎。
-                </p>
-            </div>
-            <div class="someinfo">
-                <label>测试</label>
-                <label>测试</label>
-                <label>测试</label>
-                <label class="author">作者</label>
-            </div>
-        </div>
-        <div class="try-item">
-            <div class="try-taste">
-                <h4>
-                    大道理
-                </h4>
-                <p>
-                    怕什么真理无穷，进一寸有一寸的欢喜。
-                </p>
-            </div>
-            <div class="someinfo">
-                <label>测试</label>
-                <label>测试</label>
-                <label>测试</label>
-                <label class="author">胡适</label>
-            </div>
-        </div>
         <div class="try-item" ng-repeat="l in list" >
-            <div class="img" style="background-image:url('{{l.img}}');"></div>
+            <div class="img" ng-if="l.img" style="background-image:url('{{l.img}}');"></div>
             <div class="try-taste">
                 <h4 ng-bind="l.title"></h4>
                 <p ng-bind="l.info"></p>
