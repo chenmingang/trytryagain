@@ -31,6 +31,14 @@ public class TryTryAgainController {
     @ResponseBody
     public String list(HttpServletRequest request) {
         TryTryAgainCriteria criteria = new TryTryAgainCriteria();
+        TryTryAgainCriteria.Criteria c1 = criteria.createCriteria();
+        TryTryAgainCriteria.Criteria c2 = criteria.createCriteria();
+        String keyword = request.getParameter("keyword");
+        if (keyword != null && !keyword.equalsIgnoreCase("")) {
+            c1.andTagsLike("%" + keyword + "%");
+            c2.andTitleLike("%" + keyword + "%");
+        }
+        criteria.or(c2);
         criteria.setLimitStart(0);
         criteria.setLimitEnd(100);
         return gson.toJson(tryTryAgainService.query(criteria));

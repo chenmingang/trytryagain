@@ -1,8 +1,9 @@
 var MyApp = angular.module('MyApp', ['ng']);
-MyApp.controller('indexCtr', function ($scope,$http,$timeout) {
+MyApp.controller('indexCtr', function ($scope, $http, $timeout) {
+    $scope.condition = {};
     $scope.init = function () {
         var url = "/list";
-        var data = {};
+        var data = $scope.condition;
         transFn = function (data) {
             return $.param(data);
         };
@@ -13,12 +14,11 @@ MyApp.controller('indexCtr', function ($scope,$http,$timeout) {
         $http.post(url, data, postCfg).success(function (data) {
             if (data) {
                 $scope.list = data;
-                $timeout(function() {
+                $timeout(function () {
                     $('#trys').masonry({
                         itemSelector: '.try-item'
                     });
                 }, 3);
-
             }
         });
     }

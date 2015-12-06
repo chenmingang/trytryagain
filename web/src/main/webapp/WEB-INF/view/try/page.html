@@ -1,11 +1,11 @@
 <div id="index" ng-app="MyApp" ng-controller="indexCtr" ng-init="init()">
     <div id="header">
         <div id="searcher">
-            <input placeholder="标题or标签">
+            <input placeholder="标题or标签" ng-model="condition.keyword" ng-change="init();">
         </div>
     </div>
     <div id="trys">
-        <div class="try-item" ng-repeat="l in list" >
+        <div class="try-item" ng-repeat="l in list">
             <div class="img" ng-if="l.img" style="background-image:url('{{l.img}}');"></div>
             <div class="try-taste">
                 <h4 ng-bind="l.title"></h4>
