@@ -141,6 +141,7 @@ table {
     font-size: 14px;
     color: #575757;
     margin-top: 8px;
+    cursor: pointer;
 }
 
 .try-taste p {
@@ -158,4 +159,18 @@ table {
 
 .author {
     float: right;
+}
+#tryDetail {
+    line-height: 1.48;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px
+}
+#tryDetail .img {
+    background-size: cover;
+    background-repeat: round;
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+    margin: 0 auto;
 }

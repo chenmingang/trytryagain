@@ -8,13 +8,27 @@
         <div class="try-item" ng-repeat="l in list">
             <div class="img" ng-if="l.img" style="background-image:url('{{l.img}}');"></div>
             <div class="try-taste">
-                <h4 ng-bind="l.title"></h4>
+                <h4 ng-bind="l.title" ng-click="detail(l.id)"></h4>
                 <p ng-bind="l.info"></p>
             </div>
             <div class="someinfo">
                 <label ng-bind="l.tags">测试</label>
-                <label class="author" ng-bind="l.userName">胡适</label>
+                <label class="author" ng-bind="l.userName"></label>
             </div>
+        </div>
+    </div>
+    <div id="tryDetail">
+        <div class="try-detail-title">
+            <h4 ng-bind="try.title"></h4>
+            <label ng-bind="try.tags">测试</label>
+            <label class="author" ng-bind="try.userName"></label>
+        </div>
+        <div class="try-detail-info">
+            <div class="img" ng-if="try.img" style="background-image:url('{{try.img}}');"></div>
+            <p ng-bind="try.info"></p>
+        </div>
+        <div class="try-detail-content">
+            <p ng-bind="try.content"></p>
         </div>
     </div>
 </div>
