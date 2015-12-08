@@ -17,19 +17,38 @@
             </div>
         </div>
     </div>
-    <div id="tryDetail">
-        <div class="try-detail-title">
-            <h4 ng-bind="try.title"></h4>
-            <label ng-bind="try.tags">测试</label>
-            <label class="author" ng-bind="try.userName"></label>
+
+    <a id="modal" href="#animatedModal"></a>
+    <div id="animatedModal">
+        <div class="close-animatedModal">
+            <img class="closebt" src="http://joaopereirawd.github.io/animatedModal.js/img/closebt.svg">
         </div>
-        <div class="try-detail-info">
-            <div class="img" ng-if="try.img" style="background-image:url('{{try.img}}');"></div>
-            <p ng-bind="try.info"></p>
-        </div>
-        <div class="try-detail-content">
-            <p ng-bind="try.content"></p>
+        <div class="modal-content">
+            <div id="tryDetail">
+                <div class="try-detail-title">
+                    <h1 ng-bind="try.title"></h1>
+                </div>
+                <div class="try-detail-info">
+                    <div class="img" ng-if="try.img" style="background-image:url('{{try.img}}');"></div>
+                    <div class="info">
+                        <label ng-bind="try.tags">测试</label>
+                        <label class="author" ng-bind="try.userName"></label>
+                        <p ng-bind="try.info"></p>
+                    </div>
+                </div>
+                <div class="try-detail-content">
+                    <p ng-bind="try.content"></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        $("#modal").animatedModal({
+            animatedIn: 'bounceInUp',
+            animatedOut: 'bounceOutDown'
+        });
+    });
+</script>
 <script src="/static/js/index.js"></script>

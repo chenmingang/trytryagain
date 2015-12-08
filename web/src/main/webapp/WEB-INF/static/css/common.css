@@ -160,17 +160,40 @@ table {
 .author {
     float: right;
 }
+
 #tryDetail {
     line-height: 1.48;
     background-color: #fff;
     border-radius: 5px;
-    padding: 10px
+    padding: 10px;
+    margin: 0 auto;
+    width: 60%;
+    text-align: left;
 }
+
 #tryDetail .img {
     background-size: cover;
     background-repeat: round;
     width: 50%;
     height: 50%;
     border-radius: 5px;
-    margin: 0 auto;
+    float: left;
+}
+#tryDetail .info {
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    float: right;
+}
+
+#tryDetail h1 {
+    font-size: 28px;
+    margin: 0 0 14px;
+    line-height: 1.2;
+    font-weight: normal;
+    word-break: break-all;
+    text-align: left;
+}
+.try-detail-content{
+    clear: both;
 }

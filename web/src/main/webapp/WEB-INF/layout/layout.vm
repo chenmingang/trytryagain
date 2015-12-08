@@ -2,6 +2,7 @@
 <head>
     <title>TRY</title>
     <link href="/static/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/animate.min.css">
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
     <script src="/static/js/angular.min.js"></script>
@@ -13,4 +14,5 @@
         $screen_content
     </div>
 </body>
+<script src="/static/js/animatedModal.min.js"></script>
 </html>
