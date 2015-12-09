@@ -33,7 +33,9 @@
                     </div>
                 </div>
                 <div>
-                    <div class="img" ng-if="try.img" style="background-image:url('{{try.img}}');"></div>
+                    <div class="img" ng-if="try.img">
+                        <img ng-src="{{try.img}}"/>
+                    </div>
                     <div class="info">
 
                         <div class="try-detail-info">
