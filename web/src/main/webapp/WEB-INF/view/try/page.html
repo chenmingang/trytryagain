@@ -21,19 +21,25 @@
     <a id="modal" href="#animatedModal"></a>
     <div id="animatedModal">
         <div class="close-animatedModal">
-            <img class="closebt" src="http://joaopereirawd.github.io/animatedModal.js/img/closebt.svg">
+            <img class="closebt" src="/static/img/closebt.svg">
         </div>
         <div class="modal-content">
             <div id="tryDetail">
                 <div class="try-detail-title">
                     <h1 ng-bind="try.title"></h1>
+                    <div class="tag-author">
+                        <label class="tag" ng-bind="try.tags">测试</label>
+                        <label class="author">@<span ng-bind="try.userName"></span></label>
+                    </div>
                 </div>
-                <div class="try-detail-info">
+                <div>
                     <div class="img" ng-if="try.img" style="background-image:url('{{try.img}}');"></div>
                     <div class="info">
-                        <label ng-bind="try.tags">测试</label>
-                        <label class="author" ng-bind="try.userName"></label>
-                        <p ng-bind="try.info"></p>
+
+                        <div class="try-detail-info">
+                            <label>简介:</label>
+                            <p class="try-detail-info" ng-bind="try.info"></p>
+                        </div>
                     </div>
                 </div>
                 <div class="try-detail-content">
