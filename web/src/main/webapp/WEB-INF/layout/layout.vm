@@ -7,12 +7,18 @@
     <script src="/static/js/bootstrap.min.js"></script>
     <script src="/static/js/angular.min.js"></script>
     <script src="/static/js/masonry.pkgd.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
-    <div id="content">
-        $screen_content
+<div id="content">
+    <div id="layout-header">
+        <div class="siteName">
+            待定
+        </div>
     </div>
+    $screen_content
+</div>
 </body>
 <script src="/static/js/animatedModal.min.js"></script>
 </html>

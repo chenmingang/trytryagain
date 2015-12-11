@@ -59,6 +59,16 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+#layout-header{
+    height: 30px;
+    background-color: #d3d3d3;
+}
+.siteName{
+    float: left;
+    margin-left: 3%;
+    font-weight: bold;
+    line-height: 1.9;
+}
 
 #index {
     width: 86%;
