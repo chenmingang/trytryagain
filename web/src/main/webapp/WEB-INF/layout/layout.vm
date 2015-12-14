@@ -11,10 +11,13 @@
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
-<div id="content">
+<div id="content" ng-app="MyApp" ng-controller="indexCtr" ng-init="init()">
     <div id="layout-header">
         <div class="siteName">
             待定
+        </div>
+        <div class="self-center">
+            <a ng-click="self()">我发表的</a>
         </div>
     </div>
     $screen_content

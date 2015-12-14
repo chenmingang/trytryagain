@@ -1,4 +1,4 @@
-<div id="index" ng-app="MyApp" ng-controller="indexCtr" ng-init="init()">
+<div id="index">
     <div id="header">
         <div id="searcher">
             <input placeholder="标题or标签" ng-model="condition.keyword" ng-change="init();">
@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <a id="modal" href="#animatedModal"></a>
+    <a id="readModal" href="#animatedModal"></a>
     <div id="animatedModal">
         <div class="close-animatedModal">
             <img class="closebt" src="/static/img/closebt.svg">
@@ -48,6 +48,15 @@
                     <p ng-bind="try.content"></p>
                 </div>
             </div>
+        </div>
+    </div>
+    <a id="writeModal" href="#writeAnimatedModal"></a>
+    <div id="writeAnimatedModal">
+        <div class="close-animatedModal">
+            <img class="closebt" src="/static/img/closebt.svg">
+        </div>
+        <div class="modal-content">
+
         </div>
     </div>
 </div>

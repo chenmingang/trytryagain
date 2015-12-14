@@ -22,12 +22,16 @@ MyApp.controller('indexCtr', function ($scope, $http, $timeout) {
             }
         });
     }
+    $scope.self=function(){
+        $scope.condition.userId=1;
+        $scope.init();
+    }
     $scope.detail = function(id) {
         var url = "/get?id="+id;
         $http.get(url).success(function (data) {
             if (data) {
                 $scope.try = data;
-                $("#modal").click();
+                $("#readModal").click();
             }
         });
     }

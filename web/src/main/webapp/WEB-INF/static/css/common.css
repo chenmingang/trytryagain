@@ -69,6 +69,13 @@ table {
     font-weight: bold;
     line-height: 1.9;
 }
+.self-center{
+    float: right;
+    margin-right: 3%;
+    font-weight: bold;
+    line-height: 1.9;
+    cursor: pointer;
+}
 
 #index {
     width: 86%;
