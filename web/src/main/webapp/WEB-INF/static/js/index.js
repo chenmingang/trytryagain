@@ -35,4 +35,13 @@ MyApp.controller('indexCtr', function ($scope, $http, $timeout) {
             }
         });
     }
+    $scope.edit = function(id) {
+        var url = "/get?id="+id;
+        $http.get(url).success(function (data) {
+            if (data) {
+                $scope.try = data;
+                $("#writeModal").click();
+            }
+        });
+    }
 });

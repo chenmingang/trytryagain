@@ -13,6 +13,7 @@
             </div>
             <div class="someinfo">
                 <label ng-bind="l.tags">测试</label>
+                <label ng-click="edit(l.id)">编辑</label>
                 <label class="author" ng-bind="l.userName"></label>
             </div>
         </div>
@@ -52,7 +53,7 @@
     </div>
     <a id="writeModal" href="#writeAnimatedModal"></a>
     <div id="writeAnimatedModal">
-        <div class="close-animatedModal">
+        <div class="close-writeAnimatedModal">
             <img class="closebt" src="/static/img/closebt.svg">
         </div>
         <div class="modal-content">
@@ -62,7 +63,12 @@
 </div>
 <script>
     $(document).ready(function () {
-        $("#modal").animatedModal({
+        $("#readModal").animatedModal({
+            animatedIn: 'bounceInUp',
+            animatedOut: 'bounceOutDown'
+        });
+        $("#writeModal").animatedModal({
+            modalTarget:'writeAnimatedModal',
             animatedIn: 'bounceInUp',
             animatedOut: 'bounceOutDown'
         });
