@@ -18,6 +18,7 @@
         </div>
         <div class="self-center">
             <a ng-click="self()">我发表的</a>
+            <a ng-click="add()">+</a>
         </div>
     </div>
     $screen_content

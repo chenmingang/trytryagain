@@ -59,22 +59,28 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-#layout-header{
+
+#layout-header {
     height: 30px;
     background-color: #d3d3d3;
 }
-.siteName{
+
+.siteName {
     float: left;
     margin-left: 3%;
     font-weight: bold;
     line-height: 1.9;
 }
-.self-center{
+
+.self-center {
     float: right;
     margin-right: 3%;
     font-weight: bold;
     line-height: 1.9;
     cursor: pointer;
+}
+.self-center a{
+    margin-right: 3px;
 }
 
 #index {
@@ -108,10 +114,11 @@ table {
     #trys {
         width: 290px;
     }
+
     #tryDetail .img {
         width: 100%;
-        /*height: 68%;*/
     }
+
     #tryDetail .info {
         width: 100%;
     }
@@ -121,10 +128,11 @@ table {
     #trys {
         width: 580px;
     }
+
     #tryDetail .img {
         width: 100%;
-        /*height: 250px;*/
     }
+
     #tryDetail .info {
         width: 100%;
     }
@@ -134,13 +142,19 @@ table {
     #trys {
         width: 870px;
     }
+
     #tryDetail .img {
         width: 50%;
-        /*height: 300px;*/
     }
+
     #tryDetail .info {
         width: 50%;
         /*height: 50%;*/
+        border-radius: 5px;
+        float: right;
+    }
+    #tryDetail .info-c {
+        width: 100%;
         border-radius: 5px;
         float: right;
     }
@@ -150,13 +164,18 @@ table {
     #trys {
         width: 1160px;
     }
+
     #tryDetail .img {
         width: 50%;
-        /*height: 300px;*/
     }
+
     #tryDetail .info {
         width: 50%;
-        /*height: 50%;*/
+        border-radius: 5px;
+        float: right;
+    }
+    #tryDetail .info-c {
+        width: 100%;
         border-radius: 5px;
         float: right;
     }
@@ -207,9 +226,11 @@ table {
     font-size: 12px;
     padding: 0 10px;
 }
-
-.author {
+.list-edit{
     float: right;
+}
+.author {
+    font-size: 12px;
 }
 
 #tryDetail {
@@ -226,23 +247,22 @@ table {
 #tryDetail .img {
     background-size: cover;
     background-repeat: round;
-    /*width: 50%;*/
-    /*height: 50%;*/
     border-radius: 5px;
     float: left;
     overflow: hidden;
 }
-#tryDetail .img img{
+
+#tryDetail .img img {
     width: 100%;
 }
+
 #tryDetail .info {
-    /*width: 50%;*/
-    /*height: 50%;*/
     font-size: 18px;
     border-radius: 5px;
     float: right;
 }
-.try-detail-title .tag{
+
+.try-detail-title .tag {
     float: left;
     display: block;
     padding: 0 10px;
@@ -254,9 +274,11 @@ table {
     margin: 0 10px 10px 0;
     background-color: #fff;
 }
-.tag-author{
+
+.tag-author {
     display: inline-block;
 }
+
 #tryDetail h1 {
     font-size: 28px;
     margin: 0 0 14px;
@@ -267,17 +289,26 @@ table {
     width: 50%;
     display: block;
 }
-.try-detail-info{
+
+.try-detail-info {
     clear: both;
 }
-.try-detail-info label{
+
+.try-detail-info label {
     color: #c8beac;
 }
-.try-detail-info p{
-    color:#222;
+
+.try-detail-info p {
+    color: #222;
+    text-indent: 2em;
 }
-.try-detail-content{
+
+.try-detail-content {
     font-size: 16px;
     color: #222;
     clear: both;
+}
+
+.try-detail-content p {
+    text-indent: 2em;
 }
