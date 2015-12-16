@@ -19,6 +19,7 @@ MyApp.controller('indexCtr', function ($scope, $http, $timeout) {
                 }
                 $scope.list = data;
                 $timeout(function () {
+                    $('#trys').masonry('reloadItems');
                     $('#trys').masonry({
                         itemSelector: '.try-item'
                     });
