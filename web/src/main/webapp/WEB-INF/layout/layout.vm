@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>TRY</title>
-    <link href="/static/css/common.css?v=2" rel="stylesheet">
+    <link href="/static/css/common.css?v=4" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/animate.min.css">
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
