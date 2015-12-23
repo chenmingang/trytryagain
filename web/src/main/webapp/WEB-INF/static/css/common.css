@@ -312,3 +312,32 @@ table {
 .try-detail-content p {
     text-indent: 2em;
 }
+#writeAnimatedModal input,#writeAnimatedModal textarea{
+    border: 2px solid #27ae60;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 16px;
+    padding: 13px 10px;
+    border-radius: 0;
+    margin: 5px 0;
+    text-align: center;
+}
+#writeAnimatedModal input{
+    width: 40%;
+}
+#writeAnimatedModal textarea{
+    width: 50%;
+}
+.editInfo{
+    height: 27%;
+}
+.editContent{
+    height: 40%;
+}
+#writeAnimatedModal button{
+    width: 10%;
+    height: 32px;
+    background-color: #E7FFF1;
+    border: 2px solid #27ae60;
+    margin-bottom: 100px;
+}
