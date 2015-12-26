@@ -9,6 +9,21 @@
     <script src="/static/js/masonry.pkgd.min.js"></script>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no, minimal-ui">
+    <script>
+        var _vds = _vds || [];
+        window._vds = _vds;
+        (function(){
+          _vds.push(['setAccountId', '556f747c37fb4da2a06a71bfd4275889']);
+          (function() {
+            var vds = document.createElement('script');
+            vds.type='text/javascript';
+            vds.async = true;
+            vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(vds, s);
+          })();
+        })();
+    </script>
 </head>
 <body>
 <div id="content" ng-app="MyApp" ng-controller="indexCtr" ng-init="init()">
