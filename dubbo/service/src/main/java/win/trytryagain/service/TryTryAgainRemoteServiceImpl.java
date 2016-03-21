@@ -36,7 +36,7 @@ public class TryTryAgainRemoteServiceImpl implements TryTryAgainRemoteService {
         if (tryTryAgain.getId() == null) {
             tryTryAgainMapper.insertSelective(tryTryAgain);
         } else {
-            tryTryAgainMapper.updateByPrimaryKeySelectiveWithBLOBs(tryTryAgain);
+            tryTryAgainMapper.updateByPrimaryKeySelective(tryTryAgain);
         }
         return tryTryAgain;
     }
