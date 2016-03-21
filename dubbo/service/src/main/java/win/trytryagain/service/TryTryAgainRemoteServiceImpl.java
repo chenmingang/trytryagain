@@ -36,7 +36,7 @@ public class TryTryAgainRemoteServiceImpl implements TryTryAgainRemoteService {
         if (tryTryAgain.getId() == null) {
             tryTryAgainMapper.insertSelective(tryTryAgain);
         } else {
-            tryTryAgainMapper.updateByPrimaryKeySelective(tryTryAgain);
+            tryTryAgainMapper.updateByPrimaryKeySelectiveWithBLOBs(tryTryAgain);
         }
         return tryTryAgain;
     }
@@ -52,7 +52,7 @@ public class TryTryAgainRemoteServiceImpl implements TryTryAgainRemoteService {
             tryTryAgain.setCreateTime(now);
             tryTryAgainMapper.insert(tryTryAgain);
         } else {
-            tryTryAgainMapper.updateByPrimaryKey(tryTryAgain);
+            tryTryAgainMapper.updateByPrimaryKeyWithBLOBs(tryTryAgain);
         }
         return tryTryAgain;
     }
